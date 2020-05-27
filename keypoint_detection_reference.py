@@ -73,6 +73,7 @@ def get_configured_opWrapper(hand=True,face=False,body=1, number_people_max=1,fr
     params = dict()
     params["model_folder"] = model_folder
     params["hand"] = hand
+    params["hand_detector"] = 3
     if hand and body != 1:
         # since body detection is off, we cannot use it's model (the default) so we use hand detection model
         params["hand_detector"] = HAND_DETECTOR_MODEL
